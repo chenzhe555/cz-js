@@ -18,6 +18,7 @@ module.exports = {
     ]
   },
   externals: {
-    moment: 'moment'
+    moment: 'moment',
+    lodash: 'lodash'
   }
 }
