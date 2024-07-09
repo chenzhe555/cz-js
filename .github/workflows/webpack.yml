@@ -16,7 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: |
-       
-       echo "The triggering branch is: $env.BRANCH"
+       echo "The triggering branch is: ${{env.BRANCH}}"
           
     
