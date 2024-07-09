@@ -12,7 +12,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-      echo "czx"
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
