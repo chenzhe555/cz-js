@@ -12,5 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: echo "${{github}}"
+    - run: |
+       TRIGGERING_BRANCH=${GITHUB_REF#refs/heads/}
+       echo "The triggering branch is: $TRIGGERING_BRANCH"
+          
     
