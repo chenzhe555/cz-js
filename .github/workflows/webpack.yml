@@ -2,6 +2,9 @@ name: NodeJS with Webpack
 
 on: [ workflow_dispatch ]
 
+env:
+    BRANCH: ${GITHUB_REF#refs/heads/}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: |
-       TRIGGERING_BRANCH=${GITHUB_REF#refs/heads/}
-       echo "The triggering branch is: $TRIGGERING_BRANCH"
+       
+       echo "The triggering branch is: $env.BRANCH"
           
     
